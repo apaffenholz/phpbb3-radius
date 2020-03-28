@@ -1,0 +1,9 @@
+services:
+    auth.provider.radius:
+        class: apaffenholz\radius\auth\provider\radius
+        arguments:
+            - '@dbal.conn'
+            - '@config'
+            - '@user'
+        tags:
+            - { name: auth.provider }
